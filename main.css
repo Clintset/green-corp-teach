@@ -3,6 +3,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    background-color: white;
+    top:0px;
+    z-index: 1;
 }
 body {
     font-family: 'Raleway', sans-serif;
@@ -55,6 +59,9 @@ button:hover {
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite;
+    animation-timing-function: linear;
+    position: absolute;
 }
 
 .about h1 {
@@ -160,4 +167,13 @@ footer {
 }
 .footer__links a {
     margin-bottom: 15px;
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
